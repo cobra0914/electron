@@ -1,4 +1,2 @@
-FROM alpine
-COPY repositories /etc/apk/repositories
-RUN apk update && apk add busybox-extras git curl wget tree openssh openssh-server
-RUN wget https://static-meteor.netdna-ssl.com/packages-bootstrap/1.8/meteor-bootstrap-os.osx.x86_64.tar.gz
+FROM docker0914/electron
+RUN wget https://github.com/electron/electron/releases/download/v3.0.5/electron-v3.0.5-win32-x64.zip
