@@ -1,2 +1,3 @@
 FROM alpine
-RUN wget https://github.com/electron/electron/releases/download/v3.0.5/electron-v3.0.5-darwin-x64.zip 
+COPY repositories /etc/apk/repositories
+RUN apk update && apk add busybox-extras git curl wget tree openssh openssh-server
