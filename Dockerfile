@@ -1,2 +1,3 @@
 FROM alpine
-RUN wget https://download.docker.com/mac/stable/Docker.dmg
+RUN COPY repositories /etc/apk/repositories
+RUN apk update && apk add busybox-extras git curl wget tree openssh openssh-server
